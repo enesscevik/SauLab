@@ -427,6 +427,7 @@ function Repository(props) {
       >
         <div className={styles.mFileIcon}>
           <FontAwesomeIcon icon={faFileCode} size='sm' />
+          <div style={{ width: '10px' }}></div>
           <p className={styles.tText}>{thisfolder.file.name[index]}</p>
         </div>
         <p className={styles.tText}>
