@@ -1,0 +1,33 @@
+.page {
+  border: 2px solid violet;
+  height: 83vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.pageNav {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2vh 0 2vh 0;
+}
+
+.pageNavButton {
+  background-color: rgb(5, 16, 88);
+  filter: grayscale(75%);
+  /* height: 5vh; */
+  border: 2px solid transparent;
+  color: whitesmoke;
+  padding: 2vh 0.2vh 2vh 0.2vh;
+  border-radius: 2vh;
+  cursor: pointer;
+  transition: 0.2s ease;
+  width: 14vw;
+  font-family: 'Courier New', Courier, monospace;
+}
+.pageNavButton:hover {
+  /* border: 2px solid whitesmoke; */
+  width: 18vw;
+}
+.pageNavButton:active {
+  /* border: 2px solid transparent; */
+}

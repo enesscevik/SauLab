@@ -1,0 +1,173 @@
+.mainPage {
+  /* border: 2px solid green; */
+  width: 95vw;
+}
+
+.navbar {
+  width: 100%;
+  margin: 2vh 0px 2vh 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 2vh;
+  border-bottom: 4px solid black;
+}
+
+.search {
+  width: 70vh;
+  height: 5vh;
+  background-color: rgb(5, 16, 88);
+  border: 2px solid rgb(5, 16, 88);
+  border-radius: 3vh;
+  padding-inline-start: 2vw;
+  padding-inline-end: 2vw;
+  color: rgb(169, 169, 169);
+  filter: grayscale(75%);
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace;
+}
+.search:focus {
+  outline: none;
+}
+
+.userName {
+  font-family: 'Courier New', Courier, monospace;
+  color: whitesmoke;
+  font-size: small;
+}
+
+.button {
+  width: 7vh;
+  background-color: transparent;
+  border: 0px solid whitesmoke;
+  transition: 0.2s ease;
+  color: whitesmoke;
+  cursor: pointer;
+}
+.button:hover {
+  filter: brightness(75%);
+}
+.button:active {
+  filter: brightness(65%);
+}
+.buttonRefresh {
+  width: 7vh;
+  background-color: transparent;
+  border: 0px solid whitesmoke;
+  transition: 0.2s ease;
+  color: whitesmoke;
+  cursor: pointer;
+}
+.buttonRefresh:hover {
+  filter: brightness(75%);
+}
+.buttonRefresh:active {
+  cursor: wait;
+}
+.buttonImg {
+  width: 7vh;
+  background-color: transparent;
+  border: 0px solid whitesmoke;
+  transition: 0.2s ease;
+  color: whitesmoke;
+}
+.dbImg {
+  width: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.dbImg:hover {
+  filter: brightness(75%);
+}
+.dbImg:active {
+  filter: brightness(65%);
+}
+
+.searchPop {
+  border: 2px solid blue;
+  border-radius: 3vh;
+  width: 55vw;
+  max-height: 55vw;
+  background-color: rgb(5, 16, 88);
+  filter: grayscale(75%);
+  color: whitesmoke;
+  transition: 0.2s ease;
+  animation: popAnim 0.2s ease;
+  position: fixed;
+  z-index: 2;
+  top: 55px;
+  overflow: auto;
+}
+.searchPop::-webkit-scrollbar {
+  display: none;
+}
+.repoOne {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+  min-height: 5vh;
+  padding: 10px 0px 10px 5px;
+  cursor: pointer;
+  transition: 0.1s ease;
+  user-select: none;
+  align-items: center;
+}
+.repoOne:hover {
+  filter: brightness(75%);
+}
+.repoOne:active {
+  filter: brightness(65%);
+}
+.repoOneLeft {
+  width: 20%;
+  border-right: 2px solid whitesmoke;
+}
+.repoOneRight {
+  width: 80;
+}
+@keyframes popAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.notOne {
+  border-bottom: 1px solid white;
+  min-height: 5vh;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  user-select: none;
+}
+.notOne:hover {
+  filter: brightness(75%);
+}
+.pText {
+  font-size: small;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.notPop {
+  border: 2px solid blue;
+  width: 50vw;
+  height: 50vw;
+  background-color: rgb(5, 16, 88);
+  filter: grayscale(75%);
+  color: whitesmoke;
+  transition: 0.2s ease;
+  animation: popAnim 0.2s ease;
+  position: fixed;
+  z-index: 2;
+  top: 55px;
+  right: 55px;
+  cursor: pointer;
+  overflow: auto;
+  align-items: center;
+}
+.notPop::-webkit-scrollbar {
+  display: none;
+}

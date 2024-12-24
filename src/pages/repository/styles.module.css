@@ -1,0 +1,512 @@
+.page {
+  border: 2px solid black;
+  height: 83vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.pageNav {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2vh 0 2vh 0;
+  overflow: auto;
+  min-height: 7vh;
+  padding-bottom: 2vh;
+  border-bottom: 2px solid whitesmoke;
+}
+.pageNav::-webkit-scrollbar {
+  display: none;
+}
+.pageNavButton {
+  background-color: rgb(5, 16, 88);
+  filter: grayscale(75%);
+  /* height: 5vh; */
+  border: 2px solid transparent;
+  color: whitesmoke;
+  padding: 2vh 0.2vh 2vh 0.2vh;
+  border-radius: 2vh;
+  cursor: pointer;
+  transition: 0.1s ease;
+  width: 9.5vw;
+  font-family: 'Courier New', Courier, monospace;
+  min-width: 14vw;
+  margin: 0 5px 0 5px;
+  user-select: none;
+}
+.pageNavButton:hover {
+  /* border: 2px solid whitesmoke; */
+  filter: grayscale(60%);
+}
+.pageNavButton:active {
+  /* border: 2px solid transparent; */
+  filter: grayscale(50%);
+}
+
+.deskPage {
+  height: 63vh;
+  overflow: auto;
+}
+.deskPage::-webkit-scrollbar {
+  display: none;
+}
+
+.tText {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.elTitle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 3vh;
+  font-size: 2.5vh;
+  align-items: center;
+  /* border: 2px solid greenyellow; */
+  border-bottom: 2px solid whitesmoke;
+}
+
+.elOne {
+  display: flex;
+  justify-content: space-around;
+  min-height: 10vh;
+  cursor: pointer;
+  font-size: 2.5vh;
+}
+
+.elOne:hover {
+  filter: brightness(75%);
+}
+
+.st {
+  width: 25%;
+  text-align: center;
+}
+.stlonglong {
+  width: 70%;
+  overflow: auto;
+  text-align: center;
+}
+.stlonglong::-webkit-scrollbar {
+  display: none;
+}
+.ind {
+  width: 10%;
+  text-align: center;
+}
+
+.pageNavButtonfClick {
+  border: 2px solid transparent;
+  background-color: rgb(5, 16, 88);
+  filter: grayscale(75%);
+  padding: 2vh 0.2vh 2vh 0.2vh;
+  border-radius: 2vh;
+  cursor: pointer;
+  transition: 0.1s ease;
+  width: 9.5vw;
+  font-family: 'Courier New', Courier, monospace;
+  user-select: none;
+  min-width: 7vw;
+  margin: 0 5px 0 5px;
+}
+.pageNavButtonfClick:hover {
+  filter: grayscale(50%);
+}
+.pageNavButtonfClick:active {
+  filter: grayscale(25%);
+}
+.swyes {
+  /* background-color: rgb(234, 255, 0);
+  color: black;
+  filter: grayscale(50%); */
+  color: yellow;
+  filter: grayscale(50%);
+}
+.swno {
+  /* background-color: rgb(5, 16, 88);
+  filter: grayscale(75%); */
+  color: whitesmoke;
+}
+
+.add {
+  border: 0px solid blue;
+  border-radius: 3vh;
+  width: 95vw;
+  height: 10vw;
+  background-color: transparent;
+  transition: 0.2s ease;
+  animation: popAnim 0.2s ease;
+  position: fixed;
+  z-index: 2;
+  bottom: 20px;
+  left: 23px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.addP {
+  display: flex;
+  align-items: center;
+}
+.addInput {
+  margin-left: 3vw;
+  height: 4vw;
+  width: 70vw;
+  font-size: 2.5vh;
+  border-radius: 15px;
+  padding-inline-start: 2vh;
+  padding-inline-end: 2vh;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgb(5, 16, 88);
+  filter: grayscale(75%);
+  border: 2px solid transparent;
+  color: whitesmoke;
+}
+.addInput:focus {
+  outline: none;
+}
+.addSubmit {
+  border-radius: 15px;
+
+  margin-right: 1vw;
+  width: 5vw;
+  height: 5vw;
+  background-color: greenyellow;
+  cursor: pointer;
+  transition: 0.1s ease;
+  color: whitesmoke;
+  font-size: 5.5vh;
+  user-select: none;
+  border: 2px solid black;
+  color: whitesmoke;
+}
+.addSubmit:hover {
+  filter: brightness(75%);
+}
+.addSubmit:active {
+  filter: brightness(65%);
+}
+
+.addButton {
+  margin-right: 1vw;
+  width: 5vw;
+  height: 5vw;
+  background-color: greenyellow;
+  border-radius: 50%;
+  border: 2px solid black;
+  color: whitesmoke;
+  font-size: 5.5vh;
+  cursor: pointer;
+  transition: 0.1s ease;
+  user-select: none;
+}
+.addButton:hover {
+  filter: brightness(75%);
+}
+.addButton:active {
+  filter: brightness(65%);
+}
+
+.mFolder {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  font-size: 2vh;
+  padding-left: 3vw;
+  /* border-top: 0.5px solid gray; */
+  border-bottom: 1px solid gray;
+  height: 5vh;
+  cursor: pointer;
+  user-select: none;
+}
+.mFolder:hover {
+  filter: brightness(75%);
+}
+.mFolder:active {
+  filter: brightness(65%);
+}
+.mFile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  font-size: 2vh;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  /* border-top: 0.5px solid gray; */
+  border-bottom: 1px solid gray;
+  height: 5vh;
+  cursor: pointer;
+  user-select: none;
+}
+.mFile:hover {
+  filter: brightness(75%);
+}
+.mFile:active {
+  filter: brightness(65%);
+}
+
+.mFileIcon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mainBackrooms {
+  height: 3vh;
+  font-size: 2vh;
+  overflow-y: hidden;
+  overflow-x: auto;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid gray;
+  user-select: none;
+}
+.mainBackrooms::-webkit-scrollbar {
+  display: none;
+}
+
+.childBackrooms {
+  height: 3vh;
+  font-size: 2vh;
+  overflow-y: hidden;
+  overflow-x: auto;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid gray;
+  user-select: none;
+}
+.childBackrooms::-webkit-scrollbar {
+  display: none;
+}
+
+.cbackfolder {
+  cursor: pointer;
+  margin-right: 10px;
+}
+.cbackfolder:hover {
+  filter: brightness(75%);
+}
+.cbackfolder:active {
+  filter: brightness(65%);
+}
+
+.fileback {
+  width: 4vw;
+  height: 4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 0px;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+.fileback:hover {
+  color: whitesmoke;
+}
+
+.fileView {
+  border: 2px solid blue;
+  width: 95vw;
+  height: 95vh;
+  background-color: rgb(5, 16, 88);
+  filter: grayscale(75%);
+  color: whitesmoke;
+  transition: 0.2s ease;
+  animation: popAnim 0.2s ease;
+  position: fixed;
+  z-index: 3;
+  top: 2vh;
+  left: 2vw;
+  overflow: auto;
+}
+.fileView::-webkit-scrollbar {
+  display: none;
+}
+.fileViewTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 50px;
+}
+.fileViewClose {
+  width: 4vw;
+  height: 4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+.fileViewClose:hover {
+  color: whitesmoke;
+  border: 2px solid whitesmoke;
+}
+
+.addtoRepo {
+  border: 0px solid blue;
+  /* width: 7vw; */
+  height: 12vw;
+  background-color: transparent;
+  transition: 0.2s ease;
+  animation: popAnim 0.2s ease;
+  position: fixed;
+  z-index: 2;
+  bottom: 50px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  overflow: auto;
+}
+.addtoRepo::-webkit-scrollbar {
+  display: none;
+}
+
+.addtorepoButton {
+  margin-right: 1vw;
+  width: 5vw;
+  height: 5vw;
+  background-color: rgb(5, 16, 88);
+  filter: brightness(75%);
+  border-radius: 50%;
+  border: 2px solid transparent;
+  color: whitesmoke;
+
+  cursor: pointer;
+  transition: 0.1s ease;
+  user-select: none;
+}
+.addtorepoButton:hover {
+  filter: brightness(75%);
+  border: 2px solid whitesmoke;
+}
+.addtorepoButton:active {
+  filter: brightness(65%);
+}
+.newfolderMenu {
+  border: 2px solid transparent;
+  width: 18vw;
+  /* height: 12vw; */
+  background-color: transparent;
+  transition: 0.2s ease;
+  animation: popAnim 0.2s ease;
+  position: fixed;
+  z-index: 2;
+  bottom: 130px;
+  right: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.newfileMenu {
+  border: 2px solid transparent;
+  width: 18vw;
+  /* height: 12vw; */
+  background-color: transparent;
+  transition: 0.2s ease;
+  animation: popAnim 0.2s ease;
+  position: fixed;
+  z-index: 2;
+  bottom: 60px;
+  right: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.newMenuInput {
+  background-color: rgb(5, 16, 88);
+  filter: brightness(75%);
+  border: 2px solid transparent;
+  border-radius: 3vh;
+  height: 3vh;
+  color: whitesmoke;
+  padding-inline-start: 2vh;
+  padding-inline-end: 2vh;
+  font-family: 'Courier New', Courier, monospace;
+}
+.newMenuInput:focus {
+  outline: none;
+}
+.nText {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2vh;
+}
+.nButton {
+  width: 4vh;
+  height: 4vh;
+  border-radius: 50%;
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid whitesmoke;
+}
+.nButton:hover {
+  background-color: greenyellow;
+}
+.nButton:active {
+  background-color: transparent;
+}
+.context {
+  background-color: rgb(5, 16, 88);
+  filter: brightness(75%);
+  border: 2px solid transparent;
+  width: 20vw;
+  height: 10vw;
+  transition: 0.2s ease;
+  position: fixed;
+  z-index: 2;
+  /* top: 50vh;
+  left: 50vw; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.contextButton {
+  background-color: rgb(5, 16, 88);
+  filter: brightness(75%);
+  border: 2px solid whitesmoke;
+  width: 90%;
+  height: 50%;
+  color: whitesmoke;
+  font-family: 'Courier New', Courier, monospace;
+  cursor: pointer;
+}
+.contextButton:hover {
+  filter: brightness(50%);
+}
+.contextButton:hover {
+  filter: brightness(65%);
+}
+.contextInput {
+  background-color: rgb(5, 16, 88);
+  filter: brightness(75%);
+  border: 2px solid whitesmoke;
+  width: 90%;
+  height: 40%;
+  font-size: 3vh;
+  color: whitesmoke;
+  font-family: 'Courier New', Courier, monospace;
+  cursor: pointer;
+}
+.contextInput:focus {
+  outline: none;
+}
